@@ -40,9 +40,7 @@ public class Login extends Db {
         }
     }
 
-    public boolean createAccount(String firstName, String lastName, String password, String grade) {
-        return createAccount(firstName, lastName, password, grade, 0);
-    }
+   
 
     public boolean authenticate(String firstName, String password, String grade) {
         try {
@@ -73,5 +71,8 @@ public class Login extends Db {
     
     public boolean authenticate(String firstName, String password) {
         return authenticate(firstName, password, "Étudiant");
+    }
+    public boolean createAccount(String firstName, String lastName, String password, String grade) {
+        return createAccount(firstName, lastName, password, grade, 0);
     }
 }
